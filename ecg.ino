@@ -1,9 +1,3 @@
-// ******** ELECTRODE POSITIONING ********
-// *  - RED - STERNUM                    *
-// *  - YELLOW - LEFT ARM                *
-// *  - GREEN - 5TH RIB DOWN, LEFT SIDE  *
-// ***************************************
-
 #include <SAMDUETimerInterrupt.h>
 #include <SAMDUE_ISR_Timer.h>
 #define HALF_MINUTE_MS 30000
