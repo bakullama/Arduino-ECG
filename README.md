@@ -1,6 +1,6 @@
 # Arduino-ECG
 
-Some arduino code written for the AD8232 heart rate sensor.
+Some arduino code written for the AD8232 heart rate sensor with the arduino DUE.
 
 # Pins
 
