@@ -14,6 +14,8 @@ LO-    - Digital Pin 10
 
 LO+    - Digital Pin 11
 
+LED    - Digital Pin 13
+
 # Electrode Placement
 If you're copying this, you should use a continuity tester to check, don't rely on this.
 
