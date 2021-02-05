@@ -75,7 +75,7 @@ void loop() {
     for (int i = 0; i < BUFFER_SIZE; ++i) {
       bufferSum += secondBuffer[i];
     }
-//    Serial.println(secondBeats);
+    //Serial.println(secondBeats);
     Serial.print("Heart Rate: ");
     Serial.print(bufferSum);
     Serial.println("bpm");
@@ -86,10 +86,11 @@ void loop() {
     secondTrigger = false;
   } else {
     currentval = analogRead(A0);
+//    Serial.println(currentval);
     if (currentval >= 1000) {
       thresholdcount++;
     } else if (thresholdcount > 0 && currentval < 1000){
-      if (thresholdcount > 20) {
+      if (thresholdcount > 25) {
         digitalWrite(13, HIGH);
         startTime = millis();
         secondBeats++;
