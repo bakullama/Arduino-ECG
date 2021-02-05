@@ -65,12 +65,20 @@ void loop() {
     
 
     
-  } else { // Generate random delay then increment beat
-    int delayms = random(10, 20)
-    delay(delayms);
-    beats++;
+  } else {
+    currentval = analogRead(A0);
+    if (currentval >= 1000) {
+      thresholdcount++;
+    } else if (thresholdcount > 0 && currentval < 1000){
+      if (thresholdcount > 40) {
+//        Serial.println("beat");
+        beats+=1;    
+        minuteBeats+=1;
+      }
+      thresholdcount = 0;
+    }
+
   }
-    
   //Wait for a bit to keep serial data from saturating
   delay(1);
 }
